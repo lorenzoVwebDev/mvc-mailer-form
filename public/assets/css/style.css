@@ -32,7 +32,7 @@
   font-family: "Poppins", serif;
   font-weight: 700;
   font-style: normal;
-  background-color: rgb(8, 144, 255);
+  background-color: #FF3131;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   border-bottom: solid 1px;
@@ -48,6 +48,56 @@
 
 .main-section {
   flex: 1;
+}
+
+.mail-section {
+  margin-bottom: calc(1vw + 1vh);
+}
+.mail-section h1 {
+  font-size: calc(1.3vw + 1.3vh);
+  text-align: center;
+  margin-bottom: calc(0.6vw + 0.6vh);
+}
+.mail-section #mail-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(1.2vw + 1.2vh);
+}
+.mail-section #mail-form .input-container {
+  display: flex;
+  justify-content: space-between;
+  gap: calc(1vw + 1vh);
+}
+.mail-section #mail-form .input-container input {
+  padding-left: calc(0.1vw + 0.1vh);
+  padding-right: calc(0.1vw + 0.1vh);
+}
+.mail-section #mail-form .input-container input::placeholder {
+  font-family: "Poppins", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+.mail-section #mail-form input[type=submit] {
+  font-family: "Poppins", serif;
+  font-weight: 700;
+  font-style: normal;
+  border: none;
+  background-color: #FF3131;
+  color: rgb(255, 255, 255);
+  border-radius: 25px;
+  padding-top: calc(0.3vw + 0.3vh);
+  padding-bottom: calc(0.3vw + 0.3vh);
+  padding-left: calc(0.5vw + 0.5vh);
+  padding-right: calc(0.5vw + 0.5vh);
+  box-shadow: 2px 2px 8px gray;
+  cursor: pointer;
+}
+.mail-section #mail-form input[type=submit]:active {
+  background-color: rgb(255, 255, 255);
+  border: solid 1px #FF3131;
+  color: rgb(8, 144, 255);
 }
 
 .logs-section {
@@ -82,7 +132,7 @@
   font-weight: 700;
   font-style: normal;
   border: none;
-  background-color: rgb(8, 144, 255);
+  background-color: #FF3131;
   color: rgb(255, 255, 255);
   border-radius: 25px;
   padding-top: calc(0.3vw + 0.3vh);
@@ -92,7 +142,7 @@
 }
 .logs-section .exception-container form input[type=submit]:active, .logs-section .error-container form input[type=submit]:active, .logs-section .access-container form input[type=submit]:active {
   background-color: rgb(255, 255, 255);
-  border: solid 1px rgb(8, 144, 255);
+  border: solid 1px #FF3131;
   color: rgb(8, 144, 255);
 }
 .logs-section .exception-container .exception-request-container, .logs-section .exception-container .error-request-container, .logs-section .exception-container .access-request-container, .logs-section .error-container .exception-request-container, .logs-section .error-container .error-request-container, .logs-section .error-container .access-request-container, .logs-section .access-container .exception-request-container, .logs-section .access-container .error-request-container, .logs-section .access-container .access-request-container {

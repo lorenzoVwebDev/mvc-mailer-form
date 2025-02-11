@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dog_applications>
+    <application>
+        <type ID='table-mail'>
+            <location>//..//models//tablemail.model.php</location>
+        </type>
+    </application>
+</dog_applications>

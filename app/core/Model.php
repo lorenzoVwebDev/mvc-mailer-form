@@ -67,4 +67,33 @@ class Model {
     } 
   }
 
+  function sendMail($infoArray = []) {
+    if ($infoArray[0] === 'table-mail') {
+      if (file_exists(__DIR__."//..//models//tablemail.model.php")) {
+        require_once(__DIR__."//..//models//tablemail.model.php");
+        $name = $infoArray[1];
+        $surname = $infoArray[2];
+        $birthdate = $infoArray[3];
+        $type = $infoArray[4];
+        $mail = $infoArray[5];
+        $table = $infoArray[6];
+
+        $tablemail = new Table_mail([$name, $surname, $birthdate, $type, $mail, $table]);
+        $tablemail->send_mail();
+        
+
+      }
+    } else if ($infoArray[0] === 'log_not_found') {
+      require_once(__DIR__."//..//models//tablemail.model.php");
+      $name = $infoArray[1];
+      $surname = $infoArray[2];
+      $birthdate = $infoArray[3];
+      $type = $infoArray[4];
+      $mail = $infoArray[5];
+
+      $tablemail = new Table_mail([$name, $surname, $birthdate, $type, $mail]);
+      $tablemail->send_mail();
+    }
+  }
+
 }

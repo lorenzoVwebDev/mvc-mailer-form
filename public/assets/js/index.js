@@ -6,6 +6,8 @@ import { submitMail } from './services/submit.mailform.js'
 const server = 'https://apachebackend.lorenzo-viganego.com/logs-table-reader-mvc/public/';
 const local = 'http://mvc-mailer-form/public/'
 
+submitMail()
+
 document.querySelectorAll('.log-form').forEach(element => {
   element.addEventListener('submit', async (event) => {
     event.preventDefault();

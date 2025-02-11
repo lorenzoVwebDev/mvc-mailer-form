@@ -5,6 +5,7 @@ $blue-fb: rgb(8, 144, 255);
 $blue-fb-dark: rgb(8, 33, 255);
 $white-font: rgb(255, 255, 255);
 $black-footer: rgb(23, 23, 23);
+$neon-red: #FF3131;
 
 @mixin poppins-thin {
   font-family: "Poppins", serif;
@@ -56,6 +57,7 @@ $black-footer: rgb(23, 23, 23);
   flex-direction: column;
   min-height: 100vh;
 }
+
 .git-repository-header {
   background-color: white;
   height: 5vh;
@@ -64,7 +66,7 @@ $black-footer: rgb(23, 23, 23);
   align-items: center;
   color: white;
   @include poppins-bold;
-  background-color: $blue-fb;
+  background-color: $neon-red;
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: black;
   & a {
@@ -80,7 +82,56 @@ $black-footer: rgb(23, 23, 23);
   flex: 1;
 }
 
- 
+.mail-section {
+  margin-bottom: calc(1vw + 1vh);
+  & h1 {
+    font-size: calc(1.3vw + 1.3vh);
+    text-align: center;
+    margin-bottom: calc(0.6vw + 0.6vh);
+  }
+
+& #mail-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: calc(1.2vw + 1.2vh);
+  & .input-container {
+    display: flex;
+    justify-content: space-between;
+    gap: calc(1vw + 1vh);
+    & input {
+      padding-left: calc(0.1vw + 0.1vh);
+      padding-right: calc(0.1vw + 0.1vh);
+      &::placeholder {
+        @include poppins-light();
+      }
+    }
+  }
+  & input[type=submit] { 
+
+    @include poppins-bold;
+    border: none;
+    background-color: $neon-red; 
+    color: $white-font;
+    border-radius: 25px;
+    padding-top: calc(0.3vw + 0.3vh);
+    padding-bottom: calc(0.3vw + 0.3vh);
+    padding-left: calc(0.5vw + 0.5vh);
+    padding-right: calc(0.5vw + 0.5vh);
+    box-shadow: 2px 2px 8px gray;
+    cursor: pointer;
+    &:active {
+      background-color: $white-font;
+      border: solid 1px $neon-red;
+      color: $blue-fb;
+    }
+  }
+
+
+}
+}
+
 .logs-section {
   display: grid;
   grid-template-columns: repeat(3, calc(15vw + 15vh));
@@ -108,7 +159,7 @@ $black-footer: rgb(23, 23, 23);
         width: 80%;
         @include poppins-bold;
         border: none;
-        background-color: $blue-fb;
+        background-color: $neon-red;
         color: $white-font;
         border-radius: 25px;
         padding-top: calc(0.3vw + 0.3vh);
@@ -117,7 +168,7 @@ $black-footer: rgb(23, 23, 23);
         cursor: pointer;
         &:active {
           background-color: $white-font;
-          border: solid 1px $blue-fb;
+          border: solid 1px $neon-red;
           color: $blue-fb;
         }
       }

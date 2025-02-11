@@ -181,4 +181,55 @@ class Logs extends Controller {
 
     }
   }
+
+  function sendtable() {
+    $json = file_get_contents('php://input');
+    $data = json_decode($json, true);
+
+    try {
+    if (isset($data['form-hidden'])) {
+      if (isset($data['name']) && isset($data['surname']) && isset($data['birthdate']) && isset($data['type']) && isset($data['mail'])) {
+
+        $model = new Model();
+        $event_array = $model->logsArray(filter_var($data['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+        print $event_array;
+        if ($event_array === "log file not found" && $event_array === 'logs_array.model.php not found') {
+          $model = new Model();
+          $send_mail = $model->sendMail(['log_not_found', filter_var($data['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['surname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['birthdate'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['mail'], FILTER_SANITIZE_FULL_SPECIAL_CHARS)]);
+/*           throw new Exception($event_array, 500); */
+        } else {
+          if (file_exists(__DIR__."//..//views//table.view.php")) {
+            require(__DIR__."//..//views//table.view.php");
+            $tableInstance = new Table_view($event_array, filter_var($data['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+            $table = $tableInstance->createTable();
+            if ($table != strip_tags($table)) {
+              $model = new Model();
+              $send_mail = $model->sendMail([filter_var($data['form-hidden'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['surname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['birthdate'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['mail'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), $table]);
+            } else {
+              throw new Exception("Table not created", 500);
+            }
+          } else {
+            throw new Exception('table.view.php not found', 500);
+          }
+        }
+
+
+      }
+    }
+    } catch (Exception $e) {
+      if ($e->getCode() >= 400 && $e>getCode() < 500) {
+        http_response_code(401);
+        header('Content-Type: application/json');
+        $response['result'] = 'bad-request';
+        $response['status'] = 401;
+        echo json_encode($response);
+      } else {
+        http_response_code(500);
+        header('Content-Type: application/json');
+        $response['result'] = $e->getMessage();
+        $response['status'] = 500;
+        echo json_encode($response);
+      }
+    }
+  }
 }

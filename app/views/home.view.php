@@ -10,6 +10,42 @@
   
   <section class="git-header-section"></section>
   <section class="main-section">
+    <section class="mail-section">
+    <h1>Request Your Table via e-mail</h1>      
+    <form id="mail-form">
+        <div class="input-container">
+          <div class="name">
+            <h3>Name</h3>
+            <input type="text" placeholder="Insert your name" pattern="[A-Za-z]+" minlenght="5" maxlenght="25" name="name" value="lorenzo" required/>
+          </div>
+          <div class="surname">
+            <h3>Surname</h3>
+            <input type="text" placeholder="Insert your Surname" pattern="[A-Za-z]+" minlenght="5" maxlenght="25" name="surname" value="viganego" required/>
+          </div>
+          <div class="birthdate">
+            <h3>Birthdate</h3>
+            <input type="date" name="birthdate" value="2000-01-01"/>
+          </div>
+          <div class="social">
+            <h3>Log Table</h3>
+            <select id="mail-form" name="type">
+              <option value="exception" selected>Exception</option>
+              <option value="error">Error</option>
+              <option value="access">Access</option>
+            </select>
+          </div>
+        <div> 
+          <h3>e-mail</h3> 
+          <input type="email" placeholder="insert your mail" pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" name="email" value="lorenzo.viganego@libero.it"required/>
+        </div>
+        </div>
+        <input type="text" value="table-mail" id="mail" name="form-hidden" hidden/>
+        <input type="submit" value="Submit"/>
+      </form>
+    </section>
+    <h1 style="
+      text-align: center;
+    ">Or Create a new Log and display its respective table</h1>
   <section class="logs-section">
     <div class="exception-container log-form">
       <form method="post" id="exception-form">
