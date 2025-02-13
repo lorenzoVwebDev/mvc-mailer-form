@@ -27,16 +27,19 @@ class Mailer {
 
     try {
       $mail = new PHPMailer(true);
-      $file = fopen( __DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log",'w');
-      fclose($file);
-      unset($file);
-      $mail->Debugoutput = function($str, $level) {
-        try {
-        error_log($str, 3, __DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log");
-        } catch (Throwable $t) {
-            throw new Exception($t->getMessage(), 500);
-        }
-      };
+      if (file_exists(__DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log")) {
+        $file = fopen( __DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log",'w');
+        fclose($file);
+        unset($file);
+        $mail->Debugoutput = function($str, $level) {
+          try {
+          error_log($str, 3, __DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log");
+          } catch (Throwable $t) {
+              throw new Exception($t->getMessage(), 500);
+          }
+        };
+      }
+
 /*       $mail->Timeout = 30; */
 /*       $mail->Timelimit = 30; */
       $mail->isSMTP();
