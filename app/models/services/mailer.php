@@ -28,7 +28,7 @@ class Mailer {
     try {
       $mail = new PHPMailer(true);
       $mail->Debugoutput = function($str, $level) {
-        error_log($str, 3, __DIR__."//..//..//..//logs//mailDebugOutput". date('mdy').".txt");
+        error_log($str, 3, __DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log");
       };
       $mail->isSMTP();
       $mail->Host = 'smtp.gmail.com';
