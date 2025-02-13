@@ -34,6 +34,7 @@ class Mailer {
       $mail->Password = 'gpom nsmp myjc wiuz';
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mail->Port = 587;
+      $mail->SMTPDebug = 0;
 
     
       $mail->setFrom('lorenzoviganego@gmail.com', 'LorenzoVwebdev');
