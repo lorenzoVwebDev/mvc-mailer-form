@@ -23,7 +23,7 @@
           </label>
           <label class="birthdate">
             <h3>Log Date</h3>
-            <input type="date" name="log-date" id="log-date" value="<?=date('YYYY-MM-DD');?>"/>
+            <input type="date" name="log-date" id="log-date" value="<?=date('Y-m-d')?>"/>
           </label>
           <label class="social">
             <h3>Log Table</h3>
