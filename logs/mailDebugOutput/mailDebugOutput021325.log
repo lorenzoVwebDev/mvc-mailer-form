@@ -1,4 +1,4 @@
-Connection: opening to smtp.zoho.eu:587, timeout=300, options=array()Connection: openedSERVER -> CLIENT: 220 mx.zoho.eu SMTP Server ready February 13, 2025 11:16:44 PM CET
+Connection: opening to smtp.zoho.eu:587, timeout=300, options=array()Connection: openedSERVER -> CLIENT: 220 mx.zoho.eu SMTP Server ready February 13, 2025 11:36:52 PM CET
 CLIENT -> SERVER: EHLO mvc-mailer-form
 SERVER -> CLIENT: 250-mx.zoho.eu Hello mvc-mailer-form (151.27.105.139 (151.27.105.139))
 250-STARTTLS
@@ -19,11 +19,11 @@ CLIENT -> SERVER: RCPT TO:<lorenzo.viganego@libero.it>
 SERVER -> CLIENT: 250 Recipient <lorenzo.viganego@libero.it> OK
 CLIENT -> SERVER: DATA
 SERVER -> CLIENT: 354 Ok Send data ending with <CRLF>.<CRLF>
-CLIENT -> SERVER: Date: Thu, 13 Feb 2025 22:16:43 +0000
+CLIENT -> SERVER: Date: Thu, 13 Feb 2025 22:36:51 +0000
 CLIENT -> SERVER: To: lorenzo.viganego@libero.it
 CLIENT -> SERVER: From: LorenzoVwebdev <lorenzoviganego@lorenzo-viganego.com>
 CLIENT -> SERVER: Subject: MVC mailer form portfolio project
-CLIENT -> SERVER: Message-ID: <d6ihK3LzRXMOjIWlO98zZbXW1C7D3KzB3Xybxc@mvc-mailer-form>
+CLIENT -> SERVER: Message-ID: <GfAQuN5GHQfqlb250NwjFtjNQSm10TB9yp7I6qN9JI@mvc-mailer-form>
 CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
 CLIENT -> SERVER: MIME-Version: 1.0
 CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
