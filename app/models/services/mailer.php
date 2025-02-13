@@ -30,6 +30,8 @@ class Mailer {
       $mail->Debugoutput = function($str, $level) {
         error_log($str, 3, __DIR__."//..//..//..//logs//mailDebugOutput//mailDebugOutput". date('mdy').".log");
       };
+      $mail->Timeout = 30;
+      $mail->Timelimit = 30;
       $mail->isSMTP();
       $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;
