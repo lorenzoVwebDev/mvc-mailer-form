@@ -21,7 +21,7 @@ class Table_mail {
     if (file_exists(__DIR__."//services//mailer.php")) {
       require_once(__DIR__."//services//mailer.php");
       $mailer = new Mailer([$this->name, $this->surname, $this->birthdate, $this->type, $this->email, $this->table]);
-      $mailer->sendTableMail();
+      $debug_message = $mailer->sendTableMail();
     }
   }
 }

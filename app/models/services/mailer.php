@@ -27,6 +27,9 @@ class Mailer {
 
     try {
       $mail = new PHPMailer(true);
+      $mail->Debugoutput = function($str, $level) {
+        error_log($str, 3, __DIR__."//..//..//..//logs//mailDebugOutput". date('mdy').".txt");
+      };
       $mail->isSMTP();
       $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;
@@ -35,7 +38,6 @@ class Mailer {
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mail->Port = 587;
       $mail->SMTPDebug = 3;
-      $mail->DebugOutput = function($str, $level) {echo "debug level $level; message: $str";};
     
       $mail->setFrom('lorenzoviganego@gmail.com', 'LorenzoVwebdev');
       $users = array (
@@ -94,8 +96,9 @@ class Mailer {
     
           $mail->clearAddresses();
         }
+
      } catch (Exception $e) {
-      print $e;
+/*       print $e; */
      }
   }
 }

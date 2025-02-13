@@ -78,7 +78,6 @@ class Model {
         $type = $infoArray[4];
         $mail = $infoArray[5];
         $table = $infoArray[6];
-
         $tablemail = new Table_mail([$name, $surname, $logdate, $type, $mail, $table]);
         $tablemail->sendTableMail();
       }

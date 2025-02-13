@@ -4,13 +4,13 @@
         <tr>
             <th align='left' bgcolor='#f57900' colspan="5">
                 <span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span>
-                Fatal error: Uncaught Error: Class "PHPMailer\PHPMailer\PHPmailer" not found in /var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/app/models/services/mailer.php on line <i>29</i>
+                Fatal error: Uncaught TypeError: Logs_model::__construct(): Argument #1 ($log_message) must be of type string, null given, called in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\models\tablemail.model.php on line 26 and defined in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\models\logs.model.php on line <i>7</i>
             </th>
         </tr>
         <tr>
             <th align='left' bgcolor='#f57900' colspan="5">
                 <span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span>
-                Error: Class "PHPMailer\PHPMailer\PHPmailer" not found in /var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/app/models/services/mailer.php on line <i>29</i>
+                TypeError: Logs_model::__construct(): Argument #1 ($log_message) must be of type string, null given, called in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\models\tablemail.model.php on line 26 in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\models\logs.model.php on line <i>7</i>
             </th>
         </tr>
         <tr>
@@ -25,66 +25,72 @@
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>1</td>
-            <td bgcolor='#eeeeec' align='center'>0.0001</td>
-            <td bgcolor='#eeeeec' align='right'>455936</td>
+            <td bgcolor='#eeeeec' align='center'>0.0004</td>
+            <td bgcolor='#eeeeec' align='right'>452824</td>
             <td bgcolor='#eeeeec'>{main}(  )</td>
-            <td title='/var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/index.php' bgcolor='#eeeeec'>
-                .../index.php<b>:</b>
+            <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\public\index.php' bgcolor='#eeeeec'>
+                ...\index.php<b>:</b>
                 0
             </td>
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>2</td>
-            <td bgcolor='#eeeeec' align='center'>0.0017</td>
-            <td bgcolor='#eeeeec' align='right'>558864</td>
+            <td bgcolor='#eeeeec' align='center'>0.0054</td>
+            <td bgcolor='#eeeeec' align='right'>558144</td>
             <td bgcolor='#eeeeec'>App->loadController(  )</td>
-            <td title='/var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/index.php' bgcolor='#eeeeec'>
-                .../index.php<b>:</b>
+            <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\public\index.php' bgcolor='#eeeeec'>
+                ...\index.php<b>:</b>
                 13
             </td>
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>3</td>
-            <td bgcolor='#eeeeec' align='center'>0.0018</td>
-            <td bgcolor='#eeeeec' align='right'>559264</td>
+            <td bgcolor='#eeeeec' align='center'>0.0055</td>
+            <td bgcolor='#eeeeec' align='right'>558544</td>
             <td bgcolor='#eeeeec'>Logs->sendtable(  )</td>
-            <td title='/var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/app/core/App.php' bgcolor='#eeeeec'>
-                .../App.php<b>:</b>
+            <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\core\App.php' bgcolor='#eeeeec'>
+                ...\App.php<b>:</b>
                 38
             </td>
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>4</td>
-            <td bgcolor='#eeeeec' align='center'>0.0020</td>
-            <td bgcolor='#eeeeec' align='right'>565776</td>
+            <td bgcolor='#eeeeec' align='center'>0.0062</td>
+            <td bgcolor='#eeeeec' align='right'>565056</td>
             <td bgcolor='#eeeeec'>
                 Model->sendMail( <span>$infoArray = </span>
-                <span>[0 =&gt;&#39;table-mail &#39;, 1 =&gt;&#39;lorenzo &#39;, 2 =&gt;&#39;viganego &#39;, 3 =&gt;&#39;2025-02-13 &#39;, 4 =&gt;&#39;exception &#39;, 5 =&gt;&#39;lorenzo.viganego@libero.it &#39;, 6 =&gt;&#39;&lt;table class=\&#39;exception-table-container\&#39;style=\&#39;\n        width: 100%;\n        border-collapse: collapse;\n        border: 1px solid #ddd;\n        font-family: Arial, sans-serif;\n        text-align: left;\n    &gt;&lt;tr style=\&#39;background-color: #f2f2f2;\&#39;&gt;&lt;th style=\&#39;\n                    background-color: #90EE90;\n                    border: 1px solid #ddd;\n                    padding: 10px;\n                    font-weight: bold;\n                \&#39;&gt;Date &lt;/th &gt;&lt;th style=\&#39;\n                    background-color: #90EE90;\n  &#39;...]</span>
+                <span>[0 =&gt;&#39;table-mail &#39;, 1 =&gt;&#39;lorenzo &#39;, 2 =&gt;&#39;viganego &#39;, 3 =&gt;&#39;2025-02-13 &#39;, 4 =&gt;&#39;exception &#39;, 5 =&gt;&#39;lorenzo.viganego@libero.it &#39;, 6 =&gt;&#39;&lt;table class=\&#39;exception-table-container\&#39;style=\&#39;\r\n        width: 100%;\r\n        border-collapse: collapse;\r\n        border: 1px solid #ddd;\r\n        font-family: Arial, sans-serif;\r\n        text-align: left;\r\n    &gt;&lt;tr style=\&#39;background-color: #f2f2f2;\&#39;&gt;&lt;th style=\&#39;\r\n                    background-color: #90EE90;\r\n                    border: 1px solid #ddd;\r\n                    padding: 10px;\r\n                    font-weight: bold;\r\n                \&#39;&gt;Date &lt;/th &gt;&lt;th style=\&#39;\r\n                    background-color:&#39;...]</span>
                 )
             </td>
-            <td title='/var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/app/controllers/Logs.php' bgcolor='#eeeeec'>
-                .../Logs.php<b>:</b>
+            <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\controllers\Logs.php' bgcolor='#eeeeec'>
+                ...\Logs.php<b>:</b>
                 203
             </td>
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>5</td>
-            <td bgcolor='#eeeeec' align='center'>0.0020</td>
-            <td bgcolor='#eeeeec' align='right'>565936</td>
+            <td bgcolor='#eeeeec' align='center'>0.0063</td>
+            <td bgcolor='#eeeeec' align='right'>565216</td>
             <td bgcolor='#eeeeec'>Table_mail->sendTableMail(  )</td>
-            <td title='/var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/app/core/Model.php' bgcolor='#eeeeec'>
-                .../Model.php<b>:</b>
-                83
+            <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\core\Model.php' bgcolor='#eeeeec'>
+                ...\Model.php<b>:</b>
+                82
             </td>
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>6</td>
-            <td bgcolor='#eeeeec' align='center'>0.0020</td>
-            <td bgcolor='#eeeeec' align='right'>566472</td>
-            <td bgcolor='#eeeeec'>Mailer->sendTableMail(  )</td>
-            <td title='/var/www/html/apachebackend.lorenzo-viganego.com/mvc-mailer-form/app/models/tablemail.model.php' bgcolor='#eeeeec'>
-                .../tablemail.model.php<b>:</b>
-                24
+            <td bgcolor='#eeeeec' align='center'>1.4124</td>
+            <td bgcolor='#eeeeec' align='right'>567984</td>
+            <td bgcolor='#eeeeec'>
+                Logs_model->__construct( <span>$log_message = </span>
+                <span>NULL</span>
+                , <span>$log_type = </span>
+                <span>&#39;exception &#39;</span>
+                )
+            </td>
+            <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\models\tablemail.model.php' bgcolor='#eeeeec'>
+                ...\tablemail.model.php<b>:</b>
+                26
             </td>
         </tr>
     </table>
