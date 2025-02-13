@@ -3,7 +3,7 @@ import { downloadLogFile } from './services/download.logfile.js';
 import { deleteLog } from './services/deleteLog.logfile.js';
 import { downloadTable } from './services/download.table.js'; 
 import { submitMail } from './services/submit.mailform.js'
-const server = 'https://apachebackend.lorenzo-viganego.com/logs-table-reader-mvc/public/';
+const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
 const local = 'http://mvc-mailer-form/public/'
 
 submitMail()
@@ -14,7 +14,7 @@ document.querySelectorAll('.log-form').forEach(element => {
     try {
     const formData = new FormData(event.target);
     const type = formData.getAll('type')[0];
-    const response = await fetch(`${local}logs/${type}`, {
+    const response = await fetch(`${server}logs/${type}`, {
       method: 'POST',
       body: formData
     });

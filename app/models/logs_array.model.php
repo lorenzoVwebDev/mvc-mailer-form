@@ -55,8 +55,8 @@ class Logs_array_model {
   function arrayAccess($date) {
     $setDate = date_create($date);
     $logDate = date_format($setDate, "mdy");
-    if (file_exists(LOGS."\\access\\".$date.".log")) {
-      $logFile = fopen(LOGS."\\access\\".$date.".log", "r");
+    if (file_exists(LOGS."//access//".$date.".log")) {
+      $logFile = fopen(LOGS."//access//".$date.".log", "r");
       $error_array[0] = array(
         0 => 'Date',
         1 => 'Type',

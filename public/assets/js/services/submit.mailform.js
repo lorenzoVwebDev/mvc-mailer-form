@@ -1,3 +1,6 @@
+const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
+const local = 'http://mvc-mailer-form/public/'
+
 export function submitMail() {
 if (document.getElementById('mail-form')) {
   document.getElementById('mail-form').addEventListener('submit', async event => {
@@ -9,7 +12,7 @@ if (document.getElementById('mail-form')) {
     })
 
   try {
-    const response = await fetch('http://mvc-mailer-form/public/logs/sendtable', {
+    const response = await fetch(`${server}logs/sendtable`, {
       method: 'POST',
       body: JSON.stringify({
         name: dataArray[0],

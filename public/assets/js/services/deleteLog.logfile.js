@@ -1,5 +1,5 @@
 import { downloadTable2 } from './download.table.js';
-const server = 'https://apachebackend.lorenzo-viganego.com/logs-table-reader-mvc/public/';
+const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
 const local = 'http://mvc-mailer-form/public/'
 
 export function deleteLog(type) {
@@ -10,7 +10,7 @@ export function deleteLog(type) {
         index: element.dataset.index,
         type: type
       }
-      const response = await fetch(`${local}logs/deletelog`, {
+      const response = await fetch(`${server}logs/deletelog`, {
         method: "POST",
         body: JSON.stringify(bodyObject),
         headers: {
