@@ -98,6 +98,4 @@ class Mailer {
       print $e;
      }
   }
-
-  
 }
