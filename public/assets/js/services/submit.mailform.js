@@ -10,8 +10,8 @@ if (document.getElementById('mail-form')) {
     formData.forEach(data => {
       dataArray.push(data)
     })
-/*     const controller = new AbortController();
-    setTimeout(controller.abort(), 15000) */
+    const controller = new AbortController();
+    setTimeout(() => controller.abort(), 15000);
     try {
       const response = await fetch(`${server}logs/sendtable`, {
         method: 'POST',
@@ -26,7 +26,7 @@ if (document.getElementById('mail-form')) {
         headers: {
           'Content-Type': 'application/json'
         },
-        signal: AbortSignal.timeout(30000)
+        signal: controller.signal
       })
       if (response.status >= 200 && response.status < 400) {
             const result = await response.text();
