@@ -7,6 +7,8 @@ $dotenv = Dotenv::createImmutable(__DIR__. '/../../');
 $dotenv->load();
 
 if ($_SERVER['SERVER_NAME'] == 'mvc-mailer-form') {
+  define('EMAIL_USERNAME', $_ENV['EMAIL_USERNAME']);
+  define('EMAIL_PASSWORD', $_ENV['EMAIL_PASSWORD']);
   define('LOGS', __DIR__."\\..\\..\\". "logs");
   define('ROOT', 'http://mvc-mailer-form/');
   define('DBHOST', 'localhost');

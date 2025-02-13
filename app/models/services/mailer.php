@@ -1,9 +1,6 @@
 <?php
 require __DIR__.'//..//..//..//vendor//autoload.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-
+require(__DIR__. '//..//..//..//vendor//autoload.php');
 
 
 class Mailer {
@@ -43,15 +40,15 @@ class Mailer {
 /*       $mail->Timeout = 30; */
 /*       $mail->Timelimit = 30; */
       $mail->isSMTP();
-      $mail->Host = 'smtp.gmail.com';
+      $mail->Host = 'smtp.zoho.eu';
       $mail->SMTPAuth = true;
-      $mail->Username = 'lorenzoviganego1@gmail.com';
-      $mail->Password = 'gpom nsmp myjc wiuz';
+      $mail->Username = EMAIL_USERNAME;
+      $mail->Password = EMAIL_PASSWORD;
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mail->Port = 587;
       $mail->SMTPDebug = 3;
     
-      $mail->setFrom('lorenzoviganego@gmail.com', 'LorenzoVwebdev');
+      $mail->setFrom('lorenzoviganego@lorenzo-viganego.com', 'LorenzoVwebdev');
       $users = array (
         array (
           $this->name . " " .$this->surname,
