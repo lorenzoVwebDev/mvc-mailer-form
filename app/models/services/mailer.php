@@ -21,8 +21,8 @@ class Mailer {
   $this->type = $mailArray[3];
   $this->email = $mailArray[4];
   $this->table = $mailArray[5];
-  }
-
+  } 
+//
   function sendTableMail() {
 
     try {
