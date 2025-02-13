@@ -46,8 +46,8 @@ class Mailer {
       $mail->isSMTP();
       $mail->Host = 'smtp.zoho.eu';
       $mail->SMTPAuth = true;
-      $mail->Username = EMAIL_USERNAME;
-      $mail->Password = EMAIL_PASSWORD;
+      $mail->Username = EMAILUSERNAME;
+      $mail->Password = EMAILPASSWORD;
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mail->Port = 587;
       $mail->SMTPDebug = 3;
