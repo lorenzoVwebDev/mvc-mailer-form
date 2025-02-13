@@ -1,7 +1,7 @@
 RewriteEngine On
 
 # Set the base directory for rewrite rules relative to the public directory of this framework
-RewriteBase /mvc-mailer-form/public/
+#RewriteBase /mvc-mailer-form/public/
 
 # Allow actual files and directories to be accessed
 RewriteCond %{REQUEST_FILENAME} !-f
