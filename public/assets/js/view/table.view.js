@@ -1,4 +1,4 @@
-import { appendDelete } from "../utils/append.element";
+import { appendDelete } from "../utils/append.element.js";
 
 export function createTableAndMail(result) {
   let table = document.querySelector('.table-section')
