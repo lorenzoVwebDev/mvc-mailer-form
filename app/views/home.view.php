@@ -35,7 +35,7 @@
           </label>
           <label> 
             <h3>e-mail</h3> 
-            <input type="email" placeholder="insert your mail" name="email" value="lorenzo.viganego@libero.it"required/>
+            <input type="email" placeholder="insert your mail"  name="email" value="lorenzo.viganego@libero.it"required/>
           </label>
         </div>
         <input type="text" value="table-mail" id="mail" name="form-hidden" hidden/>

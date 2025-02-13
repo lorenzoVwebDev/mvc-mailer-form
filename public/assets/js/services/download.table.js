@@ -31,7 +31,7 @@ export function downloadTable(type, resolve = false, reject = false){
 export async function downloadTable2(type) {
   let tableBool = false;
   document.querySelector('.table-section').innerHTML = '';
-  const response = await fetch(`${server}logs/table?type=${type}`)
+  const response = await fetch(`${local}logs/table?type=${type}`)
 
   if (response.status >= 200 && response.status < 400) {
     tableBool = true;;

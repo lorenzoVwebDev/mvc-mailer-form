@@ -171,12 +171,20 @@ class Logs extends Controller {
         $response['result'] = 'index and type must be specified';
         $response['status'] = 401;
         echo json_encode($response);
+        require_once(__DIR__ ."//..//models//logs.model.php");
+        $exception = new Logs_model($e->getMessage(), 'exception');
+        $last_log_message = $exception->logException();
+        unset($exception);
       } else {
         http_response_code(500);
         header('Content-Type: application/json');
         $response['result'] = $e->getMessage();
         $response['status'] = 500;
         echo json_encode($response);
+        require_once(__DIR__ ."//..//models//logs.model.php");
+        $exception = new Logs_model($e->getMessage(), 'exception');
+        $last_log_message = $exception->logException();
+        unset($exception);
       }
 
     }
@@ -201,6 +209,14 @@ class Logs extends Controller {
             if ($table != strip_tags($table)) {
               $model = new Model();
               $send_mail = $model->sendMail([filter_var($data['form-hidden'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS, FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['surname'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['log-date'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['mail'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), $table]);
+              if ($send_mail) {
+                http_response_code(200);
+                header('Contet-Type: application/json');
+                $response['message'] = 'message delivered';
+                echo json_encode($response);
+              } else {
+                throw new Exception('mail not sent', 500);
+              }
             } else {
               throw new Exception("Table not created", 500);
             }
@@ -219,12 +235,20 @@ class Logs extends Controller {
         $response['result'] = $e->getMessage();
         $response['status'] = 401;
         echo json_encode($response);
+        require_once(__DIR__ ."//..//models//logs.model.php");
+        $exception = new Logs_model($e->getMessage(), 'exception');
+        $last_log_message = $exception->logException();
+        unset($exception);
       } else {
         http_response_code(500);
         header('Content-Type: application/json');
         $response['result'] = $e->getMessage();
         $response['status'] = 500;
         echo json_encode($response);
+        require_once(__DIR__ ."//..//models//logs.model.php");
+        $exception = new Logs_model($e->getMessage(), 'exception');
+        $last_log_message = $exception->logException();
+        unset($exception);
       }
     }
   }

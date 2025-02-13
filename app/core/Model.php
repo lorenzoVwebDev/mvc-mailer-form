@@ -79,7 +79,12 @@ class Model {
         $mail = $infoArray[5];
         $table = $infoArray[6];
         $tablemail = new Table_mail([$name, $surname, $logdate, $type, $mail, $table]);
-        $tablemail->sendTableMail();
+        $result = $tablemail->sendTableMail();
+        if ($result === 'sent') {
+          return true;
+        } else {
+          return false;
+        }
       }
     } 
   }

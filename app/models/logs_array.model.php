@@ -6,8 +6,12 @@ class Logs_array_model {
   }
 
   function arrayException($date) {
-    $setDate = date_create($date);
-    $logDate = date_format($setDate, "mdy");
+    if ($date) {
+      $setDate = date_create($date);
+      $logDate = date_format($setDate, "mdy");
+    } else {
+      $logDate = date('mdy');
+    }
 /*     print_r($singleDates); */
     if (file_exists(LOGS."//exceptions//".$logDate.".log")) {
       $logFile = fopen(LOGS."//exceptions//".$logDate.".log", "r");
@@ -30,8 +34,12 @@ class Logs_array_model {
   }
 
   function arrayError($date) {
-    $setDate = date_create($date);
-    $logDate = date_format($setDate, "mdy");
+    if ($date) {
+      $setDate = date_create($date);
+      $logDate = date_format($setDate, "mdy");
+    } else {
+      $logDate = date('mdy');
+    }
     if (file_exists(LOGS."//errors//".$logDate.".log")) {
       $logFile = fopen(LOGS."//errors//".$logDate.".log", "r");
       $error_array[0] = array(
@@ -53,10 +61,14 @@ class Logs_array_model {
   }
 
   function arrayAccess($date) {
-    $setDate = date_create($date);
-    $logDate = date_format($setDate, "mdy");
-    if (file_exists(LOGS."//access//".$date.".log")) {
-      $logFile = fopen(LOGS."//access//".$date.".log", "r");
+    if ($date) {
+      $setDate = date_create($date);
+      $logDate = date_format($setDate, "mdy");
+    } else {
+      $logDate = date('mdy');
+    }
+    if (file_exists(LOGS."//access//".$logDate.".log")) {
+      $logFile = fopen(LOGS."//access//".$logDate.".log", "r");
       $error_array[0] = array(
         0 => 'Date',
         1 => 'Type',

@@ -22,6 +22,12 @@ class Table_mail {
       require_once(__DIR__."//services//mailer.php");
       $mailer = new Mailer([$this->name, $this->surname, $this->birthdate, $this->type, $this->email, $this->table]);
       $debug_message = $mailer->sendTableMail();
+
+      if ($debug_message) {
+        return 'sent';
+      } else {
+        return 'error';
+      }
     }
   }
 }

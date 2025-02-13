@@ -29,7 +29,18 @@ if (document.getElementById('mail-form')) {
         signal: controller.signal
       })
       if (response.status >= 200 && response.status < 400) {
-            const result = await response.text();
+            const result = await response.json();
+            if (document.querySelector('.error-log-message')) {
+            document.querySelector('.error-log-message').remove()
+            } 
+            let div = document.createElement('div')
+            div.classList.add('error-log-message');
+            let h2 = document.createElement('h2');
+            h2.innerHTML = 'Table sent';
+            h2.style.textAlign = 'center';
+            h2.style.color = 'green';
+            div.append(h2)
+            document.querySelector('.mail-section').append(div);
           } else if (response.status >= 400 && response.status < 500 ){
             const error = await response.json();
             if (document.querySelector('.error-log-message')) {
