@@ -1,6 +1,6 @@
 export function submitMail() {
 if (document.getElementById('mail-form')) {
-  document.getElementById('mail-form').addEventListener('submit', event => {
+  document.getElementById('mail-form').addEventListener('submit', async event => {
     event.preventDefault()
     const formData = new FormData(event.target);
     let dataArray = []
@@ -8,13 +8,13 @@ if (document.getElementById('mail-form')) {
       dataArray.push(data)
     })
 
-    console.log(dataArray)
-    const response = fetch('http://mvc-mailer-form/public/logs/sendtable', {
+  try {
+    const response = await fetch('http://mvc-mailer-form/public/logs/sendtable', {
       method: 'POST',
       body: JSON.stringify({
         name: dataArray[0],
         surname: dataArray[1],
-        birthdate: dataArray[2],
+        'log-date': dataArray[2],
         type: dataArray[3],
         mail: dataArray[4],
         'form-hidden': dataArray[5]
@@ -23,6 +23,36 @@ if (document.getElementById('mail-form')) {
         'Content-Type': 'application/json'
       }
     })
+
+    if (response.status >= 200 && response.status < 400) {
+          tableBool = true;
+          const result = await response.text();
+          console.log(result)
+        } else if (response.status >= 400 && response.status < 500 ){
+          const error = await response.json();
+          if (document.querySelector('.error-log-message')) {
+           document.querySelector('.error-log-message').remove()
+          } 
+          let div = document.createElement('div')
+          div.classList.add('error-log-message');
+          let h2 = document.createElement('h2');
+          let h3 = document.createElement('h3');
+          h2.innerHTML = '!!'+error.result + '!!' +'\n';
+          h3.innerHTML+= 'Try another date, or create a current log file below'
+          h3.style.textAlign = 'center';
+          h2.style.textAlign = 'center';
+          h2.style.color = 'red';
+          h3.style.color = 'red';
+          div.append(h2, h3)
+          document.querySelector('.mail-section').append(div);
+        } else {
+          const error = response;
+          console.log(error)
+        }
+  } catch (err) {
+    console.error(err)
+  }
+
   })
 }
 

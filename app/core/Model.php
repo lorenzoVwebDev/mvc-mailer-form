@@ -1,8 +1,9 @@
 <?php
 class Model {
   use Database;
-  
+  public $givenDate = '';
   function __construct() {
+    $this->givenDate = date('mdy');
   }
   
   function logEvent($log_message, $log_type, $log_event = 'write') {
@@ -42,13 +43,13 @@ class Model {
     } 
   } 
 
-  function logsArray($logType) {
+  function logsArray($logType, $date = null) {
     try {
       if (file_exists(__DIR__ ."//..//models//logs_array.model.php")) {
         require_once(__DIR__ ."//..//models//logs_array.model.php");
         $array_creation = new Logs_array_model($logType);
         $array_creation_method = "array".ucfirst($logType);
-        $logArray = $array_creation->$array_creation_method();
+        $logArray = $array_creation->$array_creation_method($date);
         unset($array_creation);
         if (is_array($logArray)) {
           return $logArray;
@@ -73,27 +74,15 @@ class Model {
         require_once(__DIR__."//..//models//tablemail.model.php");
         $name = $infoArray[1];
         $surname = $infoArray[2];
-        $birthdate = $infoArray[3];
+        $logdate = $infoArray[3];
         $type = $infoArray[4];
         $mail = $infoArray[5];
         $table = $infoArray[6];
 
-        $tablemail = new Table_mail([$name, $surname, $birthdate, $type, $mail, $table]);
-        $tablemail->send_mail();
-        
-
+        $tablemail = new Table_mail([$name, $surname, $logdate, $type, $mail, $table]);
+        $tablemail->sendTableMail();
       }
-    } else if ($infoArray[0] === 'log_not_found') {
-      require_once(__DIR__."//..//models//tablemail.model.php");
-      $name = $infoArray[1];
-      $surname = $infoArray[2];
-      $birthdate = $infoArray[3];
-      $type = $infoArray[4];
-      $mail = $infoArray[5];
-
-      $tablemail = new Table_mail([$name, $surname, $birthdate, $type, $mail]);
-      $tablemail->send_mail();
-    }
+    } 
   }
 
 }

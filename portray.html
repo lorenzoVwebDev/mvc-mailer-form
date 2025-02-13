@@ -4,13 +4,13 @@
         <tr>
             <th align='left' bgcolor='#f57900' colspan="5">
                 <span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span>
-                Fatal error: Uncaught TypeError: Table_view::__construct(): Argument #1 ($event_array) must be of type array, string given, called in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\controllers\Logs.php on line 199 and defined in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\views\table.view.php on line <i>5</i>
+                Fatal error: Uncaught Error: Call to undefined method Table_mail::send_mail() in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\core\Model.php on line <i>83</i>
             </th>
         </tr>
         <tr>
             <th align='left' bgcolor='#f57900' colspan="5">
                 <span style='background-color: #cc0000; color: #fce94f; font-size: x-large;'>( ! )</span>
-                TypeError: Table_view::__construct(): Argument #1 ($event_array) must be of type array, string given, called in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\controllers\Logs.php on line 199 in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\views\table.view.php on line <i>5</i>
+                Error: Call to undefined method Table_mail::send_mail() in C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\core\Model.php on line <i>83</i>
             </th>
         </tr>
         <tr>
@@ -25,7 +25,7 @@
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>1</td>
-            <td bgcolor='#eeeeec' align='center'>0.0000</td>
+            <td bgcolor='#eeeeec' align='center'>0.0001</td>
             <td bgcolor='#eeeeec' align='right'>452824</td>
             <td bgcolor='#eeeeec'>{main}(  )</td>
             <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\public\index.php' bgcolor='#eeeeec'>
@@ -35,7 +35,7 @@
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>2</td>
-            <td bgcolor='#eeeeec' align='center'>0.0040</td>
+            <td bgcolor='#eeeeec' align='center'>0.0026</td>
             <td bgcolor='#eeeeec' align='right'>558144</td>
             <td bgcolor='#eeeeec'>App->loadController(  )</td>
             <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\public\index.php' bgcolor='#eeeeec'>
@@ -45,7 +45,7 @@
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>3</td>
-            <td bgcolor='#eeeeec' align='center'>0.0041</td>
+            <td bgcolor='#eeeeec' align='center'>0.0028</td>
             <td bgcolor='#eeeeec' align='right'>558544</td>
             <td bgcolor='#eeeeec'>Logs->sendtable(  )</td>
             <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\core\App.php' bgcolor='#eeeeec'>
@@ -55,18 +55,16 @@
         </tr>
         <tr>
             <td bgcolor='#eeeeec' align='center'>4</td>
-            <td bgcolor='#eeeeec' align='center'>0.0042</td>
-            <td bgcolor='#eeeeec' align='right'>560600</td>
+            <td bgcolor='#eeeeec' align='center'>0.0040</td>
+            <td bgcolor='#eeeeec' align='right'>564464</td>
             <td bgcolor='#eeeeec'>
-                Table_view->__construct( <span>$event_array = </span>
-                <span>&#39;log file not found &#39;</span>
-                , <span>$type = </span>
-                <span>&#39;error &#39;</span>
+                Model->sendMail( <span>$infoArray = </span>
+                <span>[0 =&gt;&#39;table-mail &#39;, 1 =&gt;&#39;lorenzo &#39;, 2 =&gt;&#39;viganego &#39;, 3 =&gt;&#39;2025-02-13 &#39;, 4 =&gt;&#39;exception &#39;, 5 =&gt;&#39;lorenzo.viganego@libero.it &#39;, 6 =&gt;&#39;&lt;table class=\&#39;exception-table-container\&#39;style=\&#39;\r\n        width: 100%;\r\n        border-collapse: collapse;\r\n        border: 1px solid #ddd;\r\n        font-family: Arial, sans-serif;\r\n        text-align: left;\r\n    &gt;&lt;tr style=\&#39;background-color: #f2f2f2;\&#39;&gt;&lt;th style=\&#39;\r\n                    background-color: #90EE90;\r\n                    border: 1px solid #ddd;\r\n                    padding: 10px;\r\n                    font-weight: bold;\r\n                \&#39;&gt;Date &lt;/th &gt;&lt;th style=\&#39;\r\n                    background-color:&#39;...]</span>
                 )
             </td>
             <td title='C:\Users\loren\webDevelopment\phpExcercises\mvc-mailer-form\app\controllers\Logs.php' bgcolor='#eeeeec'>
                 ...\Logs.php<b>:</b>
-                199
+                203
             </td>
         </tr>
     </table>

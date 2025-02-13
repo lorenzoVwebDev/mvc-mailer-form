@@ -17,11 +17,11 @@ class Table_mail {
     $mailInfo[5] ? $this->table = $mailInfo[5] : 'none';
   }
 
-  function send_mail() {
+  function sendTableMail() {
     if (file_exists(__DIR__."//services//mailer.php")) {
       require_once(__DIR__."//services//mailer.php");
       $mailer = new Mailer([$this->name, $this->surname, $this->birthdate, $this->type, $this->email, $this->table]);
-      $mailer->sendMail();
+      $mailer->sendTableMail();
     }
   }
 }

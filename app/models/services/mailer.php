@@ -23,7 +23,7 @@ class Mailer {
   $this->table = $mailArray[5];
   }
 
-  function sendMail() {
+  function sendTableMail() {
 
     try {
       $mail = new PHPmailer(true);
@@ -97,4 +97,6 @@ class Mailer {
       print $e;
      }
   }
+
+  
 }
