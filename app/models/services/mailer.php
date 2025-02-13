@@ -1,7 +1,7 @@
 <?php
 require __DIR__.'//..//..//..//vendor//autoload.php';
 
-use PHPMailer\PHPMailer\PHPmailer;
+use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 
@@ -26,13 +26,13 @@ class Mailer {
   function sendTableMail() {
 
     try {
-      $mail = new PHPmailer(true);
+      $mail = new PHPMailer(true);
       $mail->isSMTP();
       $mail->Host = 'smtp.gmail.com';
       $mail->SMTPAuth = true;
       $mail->Username = 'lorenzoviganego1@gmail.com';
       $mail->Password = 'gpom nsmp myjc wiuz';
-      $mail->SMTPSecure = PHPmailer::ENCRYPTION_STARTTLS;
+      $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mail->Port = 587;
 
     
