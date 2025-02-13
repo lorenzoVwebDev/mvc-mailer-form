@@ -34,8 +34,8 @@ class Mailer {
       $mail->Password = 'gpom nsmp myjc wiuz';
       $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
       $mail->Port = 587;
-      $mail->SMTPDebug = 2;
-
+      $mail->SMTPDebug = 3;
+      $mail->DebugOutput = function($str, $level) {echo "debug level $level; message: $str";};
     
       $mail->setFrom('lorenzoviganego@gmail.com', 'LorenzoVwebdev');
       $users = array (
