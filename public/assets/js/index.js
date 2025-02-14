@@ -29,8 +29,6 @@ document.querySelectorAll('.log-form').forEach(element => {
       }).then(() => {
         submitMail()
         deleteLog(type);
-        
-        
       }).catch((error) => {
         throw new Error(error);
       })  
