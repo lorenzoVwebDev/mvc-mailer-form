@@ -5,11 +5,11 @@ CLIENT -> SERVER: AUTH LOGIN
 CLIENT -> SERVER: [credentials hidden]CLIENT -> SERVER: [credentials hidden]CLIENT -> SERVER: MAIL FROM:<lorenzoviganego@lorenzo-viganego.com>
 CLIENT -> SERVER: RCPT TO:<lorenzo.viganego@libero.it>
 CLIENT -> SERVER: DATA
-CLIENT -> SERVER: Date: Fri, 14 Feb 2025 10:04:13 +0000
+CLIENT -> SERVER: Date: Fri, 14 Feb 2025 10:25:43 +0000
 CLIENT -> SERVER: To: lorenzo.viganego@libero.it
 CLIENT -> SERVER: From: LorenzoVwebdev <lorenzoviganego@lorenzo-viganego.com>
 CLIENT -> SERVER: Subject: MVC mailer form portfolio project
-CLIENT -> SERVER: Message-ID: <BcaBJfVQBAqT0K6OVvNzIPtXCVHMqDNnQf8CrEZJvM@mvc-mailer-form>
+CLIENT -> SERVER: Message-ID: <GAU5cta8PI8t4sC0jj4Znm5HlXEciewtEZ4ASrDBh0@mvc-mailer-form>
 CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
 CLIENT -> SERVER: MIME-Version: 1.0
 CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
@@ -261,6 +261,36 @@ CLIENT -> SERVER: </td></tr><tr><td style='
 CLIENT -> SERVER:                     border: 1px solid #ddd;
 CLIENT -> SERVER:                     padding: 8px;
 CLIENT -> SERVER:                 '>02.14.2025 09:59:58</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>log file not found
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:04:14</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>email sent yet
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:04:20</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>email sent yet
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:04:37</td><td style='
 CLIENT -> SERVER:                     border: 1px solid #ddd;
 CLIENT -> SERVER:                     padding: 8px;
 CLIENT -> SERVER:                 '>User Error</td><td style='

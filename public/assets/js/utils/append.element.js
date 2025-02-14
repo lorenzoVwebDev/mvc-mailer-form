@@ -29,8 +29,8 @@ export function appendTable(response) {
 }
 
 export function appendDelete(table) {
-  const tBodyHtmlCollection = table.children[1].children[0].children[0].children;
-  console.log(tBodyHtmlCollection)
+  const tBodyHtmlCollection = table.children[0].children[0].children[0].children
+  console.dir(tBodyHtmlCollection)
   let rowsArray = Array.from(tBodyHtmlCollection);
   rowsArray.forEach((value, index) => {
     if (index != 0) {
