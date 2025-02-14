@@ -3,7 +3,6 @@ const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/publi
 const local = 'http://mvc-mailer-form/public/'
 
 export function deleteLog(type) {
-  document.querySelectorAll('.delete-log').forEach(element => {
     element.addEventListener('click', async (event) => {
       element.dataset.index
       const bodyObject = {
@@ -30,6 +29,4 @@ export function deleteLog(type) {
         return error;
       }
     })
-  })
-
 }

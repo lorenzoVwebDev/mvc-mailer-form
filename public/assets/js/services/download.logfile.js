@@ -1,9 +1,8 @@
 import "https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js";
 const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
-const local = 'http://mvc-mailer-form/public/'
-export function downloadLogFile(type) {
- document.querySelector(`.${type}-download-button`).addEventListener('click', async (event) => {
-  console.log('hello')
+const local = 'http://mvc-mailer-form/public/';
+
+export async function downloadLogFile(type) {
   const blob = await fetch(`${server}download/downloadlogs/${type}?type=${type}`).then((response) => response.blob());
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement('a');
@@ -13,7 +12,6 @@ export function downloadLogFile(type) {
   a.click();
   document.body.removeChild(a);
   window.URL.revokeObjectURL(url);
- })
 }
 
 

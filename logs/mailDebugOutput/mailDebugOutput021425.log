@@ -5,17 +5,17 @@ CLIENT -> SERVER: AUTH LOGIN
 CLIENT -> SERVER: [credentials hidden]CLIENT -> SERVER: [credentials hidden]CLIENT -> SERVER: MAIL FROM:<lorenzoviganego@lorenzo-viganego.com>
 CLIENT -> SERVER: RCPT TO:<lorenzo.viganego@libero.it>
 CLIENT -> SERVER: DATA
-CLIENT -> SERVER: Date: Fri, 14 Feb 2025 10:25:43 +0000
+CLIENT -> SERVER: Date: Fri, 14 Feb 2025 19:41:35 +0000
 CLIENT -> SERVER: To: lorenzo.viganego@libero.it
 CLIENT -> SERVER: From: LorenzoVwebdev <lorenzoviganego@lorenzo-viganego.com>
 CLIENT -> SERVER: Subject: MVC mailer form portfolio project
-CLIENT -> SERVER: Message-ID: <GAU5cta8PI8t4sC0jj4Znm5HlXEciewtEZ4ASrDBh0@mvc-mailer-form>
+CLIENT -> SERVER: Message-ID: <CNaXayenkvYm3eLiynTzE1H24hnY61WAr5Eg30DeMs@mvc-mailer-form>
 CLIENT -> SERVER: X-Mailer: PHPMailer 6.9.3 (https://github.com/PHPMailer/PHPMailer)
 CLIENT -> SERVER: MIME-Version: 1.0
 CLIENT -> SERVER: Content-Type: text/html; charset=iso-8859-1
 CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
 CLIENT -> SERVER: 
-CLIENT -> SERVER: Hi lorenzo viganego thank you so much for visiting my website, I hope that you liked it and that you will come back again!
+CLIENT -> SERVER: Hi Lorenzo Viganego thank you so much for visiting my website, I hope that you liked it and that you will come back again!
 CLIENT -> SERVER: Here is the exception table that you have requeste, please contact me for collaboration/enterprise work proposals!<table class='exception-table-container' style='
 CLIENT -> SERVER:         width: 100%;
 CLIENT -> SERVER:         border-collapse: collapse;
@@ -38,226 +38,6 @@ CLIENT -> SERVER:                     border: 1px solid #ddd;
 CLIENT -> SERVER:                     padding: 10px;
 CLIENT -> SERVER:                     font-weight: bold;
 CLIENT -> SERVER:                 '>Message</th></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 07:35:29</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>log file not found
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 07:35:38</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>hello
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 07:35:56</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>fdsaef
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 07:35:59</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>fdsaef
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 07:36:00</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>fdsaef
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 08:45:24</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 08:53:20</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 08:54:34</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 08:59:17</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:03:04</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:03:06</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:03:06</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:05:33</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:05:41</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:05:43</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:50:02</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:50:19</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:52:55</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:53:59</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:54:28</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:58:02</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>02.14.2025 09:58:40</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>User Error</td><td style='
-CLIENT -> SERVER:                     border: 1px solid #ddd;
-CLIENT -> SERVER:                     padding: 8px;
-CLIENT -> SERVER:                 '>email sent yet
-CLIENT -> SERVER: </td></tr><tr><td style='
 CLIENT -> SERVER:                     border: 1px solid #ddd;
 CLIENT -> SERVER:                     padding: 8px;
 CLIENT -> SERVER:                 '>02.14.2025 09:59:58</td><td style='
@@ -297,6 +77,136 @@ CLIENT -> SERVER:                 '>User Error</td><td style='
 CLIENT -> SERVER:                     border: 1px solid #ddd;
 CLIENT -> SERVER:                     padding: 8px;
 CLIENT -> SERVER:                 '>log file not found
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:26:38</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>email sent yet
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:26:49</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaefdsae
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:27:31</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:31:00</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:31:20</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:31:31</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:32:10</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:32:46</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaefdsa
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:32:59</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaefdsa
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:33:17</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaefdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:33:35</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaefdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 10:33:55</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>fdsaefdsaef
+CLIENT -> SERVER: </td></tr><tr><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>02.14.2025 07:40:57</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>User Error</td><td style='
+CLIENT -> SERVER:                     border: 1px solid #ddd;
+CLIENT -> SERVER:                     padding: 8px;
+CLIENT -> SERVER:                 '>email sent yet
 CLIENT -> SERVER: </td></tr></table><table width="100%" style="background-color: #121212; color: white; font-family: Arial, sans-serif; padding: 20px; text-align: left;">
 CLIENT -> SERVER:     <tr>
 CLIENT -> SERVER:         <td colspan="4" style="text-align: center; font-size: 18px; font-weight: bold; padding-bottom: 15px;">
