@@ -1,10 +1,5 @@
-import {renderResponse} from '../view/mailresponse.view.js'
-const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
-const local = 'http://mvc-mailer-form/public/'
 
-export function submitMail(fun) {
-if (document.getElementById('mail-form')) {
-  document.getElementById('mail-form').addEventListener('submit', async event => {
+export async function submitMail(event, url) {
     event.preventDefault()
     const formData = new FormData(event.target);
     let dataArray = []
@@ -18,7 +13,7 @@ if (document.getElementById('mail-form')) {
       const controller = new AbortController();
       setTimeout(() => controller.abort(), 15000);
       try {
-        const response = await fetch(`${server}logs/sendtable`, {
+        const response = await fetch(`${url}logs/sendtable`, {
           method: 'POST',
           body: JSON.stringify({
             name: dataArray[0],
@@ -35,13 +30,22 @@ if (document.getElementById('mail-form')) {
         })
         if (response.status >= 200 && response.status < 400) {
               const result = await response.json();
-              renderResponse(response)
+              return {
+                response,
+                result
+              }
             } else if (response.status >= 400 && response.status < 500 ) {
-              const error = await response.json();
-              renderResponse(response, error)
+              const result = await response.json();
+              return {
+                response,
+                result
+              }
             } else {
-              const error = response.json();
-              renderResponse(response, error)
+              const result = response.json();
+              return {
+                response,
+                result
+              }
             }
       } catch (err) {
         console.error(err)
@@ -50,7 +54,7 @@ if (document.getElementById('mail-form')) {
       return 'invalid mail';
     }
 
-  })
-}
+  
+
 }
 

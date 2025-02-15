@@ -1,8 +1,6 @@
 export async function renderResponse(response = {
   status: 0
-}, error) {
-
-  
+}, result) {
   if (response === 'invalid mail') {
     if (document.querySelector('.error-log-message')) {
       document.querySelector('.error-log-message').remove()
@@ -21,6 +19,7 @@ export async function renderResponse(response = {
       document.querySelector('.mail-section').append(div);
       return
   }
+
   if (response.status >= 200 && response.status < 400) {
     if (document.querySelector('.error-log-message')) {
       document.querySelector('.error-log-message').remove()
@@ -28,13 +27,13 @@ export async function renderResponse(response = {
       let div = document.createElement('div')
       div.classList.add('error-log-message');
       let h2 = document.createElement('h2');
-      h2.innerHTML = 'Table sent';
+      h2.innerHTML = `${result.message}`;
       h2.style.textAlign = 'center';
       h2.style.color = 'green';
       div.append(h2)
       document.querySelector('.mail-section').append(div);
+      return;
   } else if (response.status >= 400 && response.status < 500 ) {
-    console.log(response)
     if (response.status === 409) {
       if (document.querySelector('.error-log-message')) {
         document.querySelector('.error-log-message').remove()
@@ -43,7 +42,7 @@ export async function renderResponse(response = {
         div.classList.add('error-log-message');
         let h2 = document.createElement('h2');
         let h3 = document.createElement('h3');
-        h2.innerHTML = '!!'+ error.result + '!!' +'\n';
+        h2.innerHTML = '!!'+ result.result + '!!' +'\n';
         h3.innerHTML+= 'You have reached the max mail deliverings'
         h3.style.textAlign = 'center';
         h2.style.textAlign = 'center';
@@ -53,14 +52,15 @@ export async function renderResponse(response = {
         document.querySelector('.mail-section').append(div);
         return;
     }
+
     if (document.querySelector('.error-log-message')) {
       document.querySelector('.error-log-message').remove()
-      } 
+    } 
       let div = document.createElement('div')
       div.classList.add('error-log-message');
       let h2 = document.createElement('h2');
       let h3 = document.createElement('h3');
-      h2.innerHTML = '!!'+error.result + '!!' +'\n';
+      h2.innerHTML = '!!'+result.result + '!!' +'\n';
       h3.innerHTML+= 'Try another date, or create a current log file below'
       h3.style.textAlign = 'center';
       h2.style.textAlign = 'center';

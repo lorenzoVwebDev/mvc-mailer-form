@@ -12,7 +12,6 @@ class Logs_array_model {
     } else {
       $logDate = date('mdy');
     }
-/*     print_r($singleDates); */
     if (file_exists(LOGS."//exceptions//".$logDate.".log")) {
       $logFile = fopen(LOGS."//exceptions//".$logDate.".log", "r");
       $error_array[0] = array(

@@ -208,18 +208,12 @@ class Logs extends Controller {
           if ($count > 2) {
             throw new exception('email sent yet', 409);
           }
-        } else {
-          $error_message = $email_array;
-          throw new Exception($error_message);
-        }
-
-
+        } 
         $logEmail = new Model();
         $mailLogged = $logEmail->logEvent(filter_var($data['mail'], FILTER_SANITIZE_EMAIL), 'email');
         if (!(isset($mailLogged)&&$mailLogged === trim(filter_var($data['mail'], FILTER_SANITIZE_EMAIL)))) {
           throw new Error('email not logged', 500);
         }
-
         $model = new Model();
         $event_array = $model->logsArray(filter_var($data['type'], FILTER_SANITIZE_FULL_SPECIAL_CHARS), filter_var($data['log-date'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
         if ($event_array === "log file not found" || $event_array === 'logs_array.model.php not found') {

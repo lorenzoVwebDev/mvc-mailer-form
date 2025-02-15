@@ -1,7 +1,7 @@
 const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
 const local = 'http://mvc-mailer-form/public/'
 
-export function appendTable(response) {
+export function appendButtons(response) {
   if (document.querySelector(`.${response.logType}-request-container`)) {
     document.querySelector(`.${response.logType}-request-container`).remove();
   }
@@ -25,12 +25,10 @@ export function appendTable(response) {
   } catch (err) {
     console.error(err)
   }
-
 }
 
 export function appendDelete(table) {
   const tBodyHtmlCollection = table.children[0].children[0].children[0].children
-  console.dir(tBodyHtmlCollection)
   let rowsArray = Array.from(tBodyHtmlCollection);
   rowsArray.forEach((value, index) => {
     if (index != 0) {
