@@ -1,7 +1,5 @@
-const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
-const local = 'http://mvc-mailer-form/public/'
 
-export async function submitMail(event) {
+export async function submitMail(event, url) {
     event.preventDefault()
     const formData = new FormData(event.target);
     let dataArray = []
@@ -15,7 +13,7 @@ export async function submitMail(event) {
       const controller = new AbortController();
       setTimeout(() => controller.abort(), 15000);
       try {
-        const response = await fetch(`${local}logs/sendtable`, {
+        const response = await fetch(`${url}logs/sendtable`, {
           method: 'POST',
           body: JSON.stringify({
             name: dataArray[0],

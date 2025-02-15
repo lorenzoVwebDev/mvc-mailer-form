@@ -1,15 +1,11 @@
-import { downloadTable2 } from './download.table.js';
-const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
-const local = 'http://mvc-mailer-form/public/'
 
-export function deleteLog(type) {
-    element.addEventListener('click', async (event) => {
+export async function deleteLog(type, element, url) {
       element.dataset.index
       const bodyObject = {
         index: element.dataset.index,
         type: type
       }
-      const response = await fetch(`${server}logs/deletelog`, {
+      const response = await fetch(`${url}logs/deletelog`, {
         method: "POST",
         body: JSON.stringify(bodyObject),
         headers: {
@@ -19,14 +15,12 @@ export function deleteLog(type) {
 
       if (response.status >= 200 && response.status < 400) {
         const result = await response.json();
-        console.log('hello');
-        downloadTable2(type);
+        return result
       } else if (response.status >= 400 && response.status < 500 ){
         const error = response;
-        return error
+        throw new Error(error)
       } else {
         const error = response;
-        return error;
+        throw new Error(error);
       }
-    })
 }

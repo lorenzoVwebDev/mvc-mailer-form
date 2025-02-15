@@ -30,7 +30,6 @@ export function appendButtons(response) {
 export function appendDelete(table) {
   const tBodyHtmlCollection = table.children[0].children[0].children[0].children
   let rowsArray = Array.from(tBodyHtmlCollection);
-  console.dir(rowsArray)
   rowsArray.forEach((value, index) => {
     if (index != 0) {
       const newValue = document.createElement('td');

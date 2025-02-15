@@ -1,10 +1,8 @@
-const server = 'https://apachebackend.lorenzo-viganego.com/mvc-mailer-form/public/';
-const local = 'http://mvc-mailer-form/public/'
 
-export async function logEvent(event) {
+export async function logEvent(event, url) {
   const formData = new FormData(event.target);
   const type = formData.getAll('type')[0];
-  const response = await fetch(`${local}logs/${type}`, {
+  const response = await fetch(`${url}logs/${type}`, {
     method: 'POST',
     body: formData
   });
