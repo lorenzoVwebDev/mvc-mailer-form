@@ -15,11 +15,11 @@
         <div class="input-container">
           <label class="name">
             <h3>Name</h3>
-            <input type="text" placeholder="Insert your name" pattern="[A-Za-z]+" minlenght="5" maxlenght="25" name="name" value="Lorenzo" required />
+            <input type="text" placeholder="Insert your name" pattern="[A-Za-z]+" minlenght="5" maxlenght="25" name="name" required />
           </label>
           <label class="surname">
             <h3>Surname</h3>
-            <input type="text" placeholder="Insert your Surname" pattern="[A-Za-z]+" minlenght="5" maxlenght="25" name="surname" value="Viganego" required/>
+            <input type="text" placeholder="Insert your Surname" pattern="[A-Za-z]+" minlenght="5" maxlenght="25" name="surname" required/>
           </label>
           <label class="birthdate">
             <h3>Log Date</h3>
@@ -35,7 +35,7 @@
           </label>
           <label> 
             <h3>e-mail</h3> 
-            <input type="email" placeholder="insert your mail" name="email" value="lorenzo.viganego@libero.it"required/>
+            <input type="email" placeholder="insert your mail" name="email" required/>
           </label>
         </div>
         <input type="text" value="table-mail" id="mail" name="form-hidden" hidden/>
